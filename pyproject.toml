@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.0.0"
+description = "{{ cookiecutter.project_short_description }}"
+requires-python = ">=3.10"
+authors = [
+  { name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}" },
+]
+dependencies = [
+  "pip>=23",
+]
+
+[tool.black]
+target-version = ["py310"]
+line-length = 120
+
+[project.scripts]
+# hello-world = "{{ cookiecutter.project_slug }}.filename:func_name"
+
+[tool.setuptools.package-data]
+# {{ cookiecutter.project_slug }} = ["data/img.png"]
